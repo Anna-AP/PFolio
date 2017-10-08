@@ -1,0 +1,17 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Sans';
+
+* { box-sizing: border-box; margin:0; padding: 0; list-style: none; text-decoration: none; }
+body { background-color: #e7e7e7; font-family: 'PT Sans', sans-serif; }/*background-image: url(../images/bg.png);*/
+a { color: #17365d; }
+
+/* ---------- NAVBAR ---------- */
+
+.ma_nav { background-color: #71c4ec; border: none; position: fixed; }
+.content_nav { height: 60px; margin-top: 6px; }
+.nav_list{ position: absolute; left: 20px; }
+.logo_site { position: absolute; right: 20px; top: -15px; }
+.ma_nav a { color: #ffffff!important; font-size: 1.1em!important; }
+.content { padding-top: 65px; }
+.navbar-inverse .navbar-nav > .open > a { background-color: #71c4ec !important; color: #ffffff; }
+.nav .dropdown-menu > li > a , .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover { color: #365f90 !important; font-size: 1.1em; background-color: #ffffff !important; }
+

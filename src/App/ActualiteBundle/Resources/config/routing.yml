@@ -1,0 +1,9 @@
+app_actualite_homepage:
+    path:     /news
+    defaults: { _controller: AppActualiteBundle:Actualite:index }
+
+app_actualite_show:
+    path:     /news/show/{id}
+    defaults: { _controller: AppActualiteBundle:Actualite:view }
+    requirements:
+        id:    '\d+'

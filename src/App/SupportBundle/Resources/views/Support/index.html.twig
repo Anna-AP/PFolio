@@ -1,0 +1,15 @@
+{% extends "AppSupportBundle::index.html.twig" %}
+
+{% block body %}
+	<div class="container content_admin">
+		{% for th in theme %}
+			<div class='row'>
+				<a href="{{ path('app_support_theme', {id: th.id}) }}"><h1>{{ th.title }}</h1></a>
+				<div>
+					Ici se trouvera la dernière publication du thème
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
+

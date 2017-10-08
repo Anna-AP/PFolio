@@ -1,0 +1,16 @@
+{% extends "AppAdminBundle::index.html.twig" %}
+
+{% block body %}
+		<div class="container content_admin_accueil">
+			<div class="row listing">
+				<div class="col-lg-2 text-center menu_admin"><a href="{{ path('app_admin_actualite_show') }}">Actualit&eacute;</a></div>
+				<div class="col-lg-2 text-center menu_admin"><a href="{{ path('app_admin_realisations_show') }}">R&eacute;alisations</a></div>
+				<div class="col-lg-2 text-center menu_admin"><a href="{{ path('app_admin_support_show') }}">Support</a></div>
+				<div class="col-lg-2 text-center menu_admin"><a href="{{ path('app_admin_user_show') }}">User</a></div>
+				<div class="col-lg-2 text-center menu_admin"><a href="{{ path('app_admin_theme_show') }}">Thèmes</a></div>
+				<div class="col-lg-2 text-center menu_admin"><a href="{{ path('app_admin_profils_show') }}">Profils</a></div>
+				<div class="col-lg-2 text-center menu_admin"><a href="{{ path('app_admin_forum_show') }}">Forum</a></div>
+				<div class="col-lg-2 text-center menu_admin"><a href="{{ path('app_admin_commentaires_show') }}">Commentaires</a></div>
+			</div>
+		</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+app_portfolio_homepage:
+    path:     /
+    defaults: { _controller: AppPortfolioBundle:Homepage:index }
+
+app_portfolio_realisations:
+    path:     /realisations
+    defaults: { _controller: AppPortfolioBundle:Realisations:index }
+
+app_portfolio_about_me:
+    path:     /about
+    defaults: { _controller: AppPortfolioBundle:Aboutme:index }
+
+app_portfolio_contact:
+    path:     /contact
+    defaults: { _controller: AppPortfolioBundle:Contact:index }

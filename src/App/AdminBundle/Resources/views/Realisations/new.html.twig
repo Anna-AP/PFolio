@@ -1,0 +1,95 @@
+{% extends "AppAdminBundle::index.html.twig" %}
+
+{% block body %}
+		<div class="container col-lg-10 col-lg-offset-1 content_admin">
+
+			<div class="row">
+				<h1 class="text-center title_admin">{% block title %} {{ 'Projets' }} <i class="fa fa-chevron-right"></i> {{'create'}} {% endblock %}</h1>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12 subnav text-center">
+					<a href="{{ path('app_admin_actualite_show') }}">Actualité</a>
+					<a href="{{ path('app_admin_realisations_show') }}">Réalisations</a>
+					<a href="{{ path('app_admin_support_show') }}">Support</a>
+					<a href="{{ path('app_admin_user_show') }}">User</a>
+					<a href="{{ path('app_admin_theme_show') }}">Thèmes</a>
+					<a href="{{ path('app_admin_profils_show') }}">Profils</a>
+					<a href="{{ path('app_admin_forum_show') }}">Forum</a>
+					<a href="{{ path('app_admin_commentaires_show') }}">Commentaires</a>
+				</div>
+			</div>
+			
+			<div class="well">
+				{{ form_start(form, {'attr' : { 'class' : 'form-horizontal'}} ) }}
+				{{ form_errors(form) }}
+				<div class="form-group form_row">
+					<div class="row">
+						{{ form_label(form.title, 'Nom du projet', {'label_attr': { 'class' : 'col-sm-2 control-label' }} ) }}
+						{{ form_errors(form.title) }}
+						<div class="col-sm-8">
+							{{ form_widget(form.title, { 'attr' : {'class' : 'form-control'}} ) }}
+						</div>
+					</div>
+					<div class="row">
+						{{ form_label(form.url, 'URL du projet', {'label_attr': { 'class' : 'col-sm-2 control-label' }} ) }}
+						{{ form_errors(form.url) }}
+						<div class="col-sm-3">
+							{{ form_widget(form.url, { 'attr' : {'class' : 'form-control'}} ) }}
+						</div>
+						{{ form_label(form.logo, 'Logo', {'label_attr': { 'class' : 'col-sm-2 control-label' }} ) }}
+						{{ form_errors(form.logo) }}
+						<div class="col-sm-3">
+							{{ form_widget(form.logo, { 'attr' : {'class' : 'form-control'}} ) }}
+						</div>
+					</div>
+					<div class="row">
+						{{ form_label(form.imageUn, 'Visuel 1', {'label_attr': { 'class' : 'col-sm-2 control-label' }} ) }}
+						{{ form_errors(form.imageUn) }}
+						<div class="col-sm-3">
+							{{ form_widget(form.imageUn, { 'attr' : {'class' : 'form-control'}} ) }}
+						</div>
+						{{ form_label(form.imageDeux, 'Visuel 2', {'label_attr': { 'class' : 'col-sm-2 control-label' }} ) }}
+						{{ form_errors(form.imageDeux) }}
+						<div class="col-sm-3">
+							{{ form_widget(form.imageDeux, { 'attr' : {'class' : 'form-control'}} ) }}
+						</div>
+					</div>
+					<div class="row">
+						{{ form_label(form.imageTrois, 'Visuel 3', {'label_attr': { 'class' : 'col-sm-2 control-label' }} ) }}
+						{{ form_errors(form.imageTrois) }}
+						<div class="col-sm-3">
+							{{ form_widget(form.imageTrois, { 'attr' : {'class' : 'form-control'}} ) }}
+						</div>
+						{{ form_label(form.imageQuatre, 'Visuel 4', {'label_attr': { 'class' : 'col-sm-2 control-label' }} ) }}
+						{{ form_errors(form.imageQuatre) }}
+						<div class="col-sm-3">
+							{{ form_widget(form.imageQuatre, { 'attr' : {'class' : 'form-control'}} ) }}
+						</div>
+					</div>
+					<div class="row">
+						{{ form_label(form.imageCinq, 'Visuel 5', {'label_attr': { 'class' : 'col-sm-2 control-label' }} ) }}
+						{{ form_errors(form.imageCinq) }}
+						<div class="col-sm-3">
+							{{ form_widget(form.imageCinq, { 'attr' : {'class' : 'form-control'}} ) }}
+						</div>
+						{{ form_label(form.publish, 'Publish', {'label_attr': { 'class' : 'col-sm-2 control-label' }} ) }}
+						{{ form_errors(form.publish) }}
+						<div class="col-sm-1">
+							{{ form_widget(form.publish, { 'attr' : {'class' : 'form-control'}} ) }}
+						</div>
+					</div>
+					<div class="form-group">
+						{{ form_label(form.text, 'Description', {'label_attr': { 'class' : 'col-sm-2 control-label' }} ) }}<br><br>
+						{{ form_errors(form.text) }}
+						{{ form_widget(form.text, { 'attr' : {'class' : 'form-control col-sm-4'}} ) }}
+					</div>
+				</div>
+				{# {{ form_widget(form.created, {'attr' : {'value' : 'now'|date('Y-m-d') }} ) }} #}
+				{{ form_widget(form.save, {'attr': {'class': 'btn btn-primary save'}}) }}
+			  
+				{{ form_rest(form) }}
+  				{{ form_end(form) }} 
+			</div>
+		</div>
+{% endblock %}

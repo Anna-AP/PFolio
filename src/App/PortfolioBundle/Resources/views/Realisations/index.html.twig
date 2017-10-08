@@ -1,0 +1,49 @@
+{% extends "AppPortfolioBundle::index.html.twig" %}
+
+{% block body %}
+	<section class="content_admin">
+		<div class="row">
+			<h1 class="text-center title_admin">{% block title %} {{ 'My Projects' }} {% endblock %}</h1>
+		</div>
+
+		<div class="row" style="margin-top:30px;margin-left:60px;margin-right:20px;">
+			{% for real in realisations %}
+				<div class="vignette col-lg-2 col-md-3 col-sm-4 col-x-12 text-center">
+			        <img src="{{ asset('images/'~real.logo) }}" class="img-responsive" width="160" height="160" style="box-shadow: 3px 3px 8px #c8c7c7;">
+			       	<a class="vignette dialog" id="{{ real.id }}">{{ real.title }}</a>
+			    </div>
+			{% endfor %}
+		</div>
+
+		{% for real in realisations %}
+		    <div id="dialog_{{ real.id }}" id="{{ real.id }}" style="display:none;">
+                <header>
+                    <h2>{{ real.title }}</h2>
+                </header>
+                <section>
+                    <img src="{{ asset('images/'~real.imageUn ) }}" class="img-responsive" width="550">
+                    <div class="scrollable">
+	                    {{ real.text|raw }}
+	                </div>
+                </section>
+                <footer>
+                	<a class="voir_site" href="{{ real.url }}" target="_blank">Voir le site</a>
+                </footer>
+	        </div>
+        {% endfor %}
+	</section>
+{% endblock %}
+
+{% block javascript %}
+	<script type="text/javascript">
+		$('.dialog').click(function() {
+			var id = $(this).attr('id');
+			$('#dialog_' + id).dialog({ closeText: 'X', modal: true, width: 720, });
+			$('.ui-dialog-titlebar-close').text('X');
+		});
+	</script>
+{% endblock %}
+
+{# https://openclassrooms.com/courses/simplifiez-vos-developpements-javascript-avec-jquery/jquery-ui#/id/r-1636727 #}
+
+{# https://www.tutorialspoint.com/jqueryui/jqueryui_dialog.htm #}

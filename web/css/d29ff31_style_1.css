@@ -1,0 +1,11 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Sans';
+
+* { box-sizing: border-box; margin:0; padding: 0; list-style: none; text-decoration: none; }
+body { background-image: url(../Resources/images/bg.png); font-family: 'PT Sans', sans-serif; }
+a { color: #17365d; }
+
+#header_site { min-width: 700px; background-color: #71c4ec;  width: 100%; height: 65px; position: fixed; }
+#header_position { position: relative; }
+nav { position: absolute; left: 10px; margin-top: 20px; }
+nav a { color: #ffffff; font-size: 1em; margin-left: 20px; }
+.logo_site { position: absolute; right: 20px; }

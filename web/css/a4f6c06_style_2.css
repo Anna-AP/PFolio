@@ -1,0 +1,18 @@
+.content_admin { margin-top: 70px; }
+.content_admin_accueil { display: flex; justify-content: center; margin-top: 70px; }
+.content_admin .listing { margin-left: 140px; }
+.menu_admin { /*width:100%;*/ height: 150px; background-color: #17365d; margin: 20px; border-radius: 10px; display: flex; }
+.menu_admin a { color: #ffffff; font-size: 1.2em; font-weight: bold; display:inline-block; margin: auto; }
+
+.subnav, .subnav_support { background-color: rgba(23 , 54 , 93 , 0.7); height: 20px; margin-bottom: 20px;}
+.subnav a { color: #ffffff; margin-left: 35px; margin-right: 35px; }
+.subnav_support a { color: #ffffff; margin-left: 30px; margin-right: 30px; }
+
+.title_admin { font-size: 2.3em; color: #101010; font-weight: bold; margin-bottom: 15px; }
+.title_admin i { font-size: 15px; }
+.create { background-color: #17365d!important; margin-right: 15px; margin-bottom: 10px; color: #ffffff; }
+.create:hover { background-color: #17365d!important; margin-left: 15px; margin-bottom: 10px; color: #ffffff; }
+
+.form_row .row { margin-top: 10px!important; }
+.form-horizontal .form-group { margin-left: 0; margin-right: 0; }
+.save { display: block; margin: auto; width: 150px; }

@@ -1,0 +1,15 @@
+{% extends "AppSupportBundle::index.html.twig" %}
+
+{% block body %}
+	<div class="container content_admin">
+		<div class="row">
+			<h1>{{ theme.title }}</h1>
+		</div>
+
+		{% for supp in support %}
+			<div class="row">
+				{{ supp.title }}
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

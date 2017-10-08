@@ -1,0 +1,179 @@
+app_admin_homepage:
+    path:     /admin
+    defaults: { _controller: AppAdminBundle:Home:index }
+
+app_admin_accueil:
+    path:     /accueil
+    defaults: { _controller: AppAdminBundle:Accueil:index }
+
+# ---------- REALISATIONS ---------- 
+# ----------------------------------
+
+app_admin_realisations_show:
+    path:     /projects
+    defaults: { _controller: AppAdminBundle:Realisations:index }
+
+app_admin_realisations_new:
+    path:     /projects/new
+    defaults: { _controller: AppAdminBundle:Realisations:add }
+
+app_admin_realisations_edit:
+    path:     /projects/edit/{id}
+    defaults: { _controller: AppAdminBundle:Realisations:edit }
+    requirements:
+        id:    '\d+'
+
+app_admin_realisations_delete:
+    path:     /projects/delete
+    defaults: { _controller: AppAdminBundle:Realisations:delete }
+
+# ---------- ACTUALITE ----------
+# -------------------------------
+
+app_admin_actualite_show:
+    path:     /actualite
+    defaults: { _controller: AppAdminBundle:Actualite:index }
+
+app_admin_actualite_new:
+    path:     /actualite/new
+    defaults: { _controller: AppAdminBundle:Actualite:add }
+
+app_admin_actualite_edit:
+    path:     /actualite/edit/{id}
+    defaults: { _controller: AppAdminBundle:Actualite:edit }
+    requirements:
+        id:    '\d+'
+
+app_admin_actualite_delete:
+    path:     /actualite/delete
+    defaults: { _controller: AppAdminBundle:Actualite:delete }
+
+# ---------- SUPPORT ----------
+# -----------------------------
+
+app_admin_support_show:
+    path:     /supports
+    defaults: { _controller: AppAdminBundle:Support:index }
+
+app_admin_support_listing:
+    path:     /supports/listing/{id}
+    defaults: { _controller: AppAdminBundle:Support:listing }
+    requirements:
+        id:    '\d+'
+
+app_admin_support_new:
+    path:     /supports/new
+    defaults: { _controller: AppAdminBundle:Support:add }
+
+app_admin_support_edit:
+    path:     /supports/edit/{id}
+    defaults: { _controller: AppAdminBundle:Support:edit }
+    requirements:
+        id:    '\d+'
+
+app_admin_support_delete:
+    path:     /supports/delete
+    defaults: { _controller: AppAdminBundle:Support:delete }
+
+# ---------- THEME ----------
+# ---------------------------
+
+app_admin_theme_show:
+    path:     /theme
+    defaults: { _controller: AppAdminBundle:Theme:index }
+
+app_admin_theme_new:
+    path:     /theme/new
+    defaults: { _controller: AppAdminBundle:Theme:add }
+
+app_admin_theme_edit:
+    path:     /theme/edit/{id}
+    defaults: { _controller: AppAdminBundle:Theme:edit }
+    requirements:
+        id:    '\d+'
+
+app_admin_theme_delete:
+    path:     /theme/delete
+    defaults: { _controller: AppAdminBundle:Theme:delete }
+
+# ---------- PROFILS ----------
+# -----------------------------
+
+app_admin_profils_show:
+    path:     /profils
+    defaults: { _controller: AppAdminBundle:Profils:index }
+
+app_admin_profils_new:
+    path:     /profils/new
+    defaults: { _controller: AppAdminBundle:Profils:add }
+
+app_admin_profils_edit:
+    path:     /profils/edit/{id}
+    defaults: { _controller: AppAdminBundle:Profils:edit }
+    requirements:
+        id:    '\d+'
+
+app_admin_profils_delete:
+    path:     /profils/delete
+    defaults: { _controller: AppAdminBundle:Profils:delete }
+
+# ---------- USER ----------
+# --------------------------
+
+app_admin_user_show:
+    path:     /user
+    defaults: { _controller: AppAdminBundle:User:index }
+
+app_admin_user_new:
+    path:     /user/new
+    defaults: { _controller: AppAdminBundle:User:add }
+
+app_admin_user_edit:
+    path:     /user/edit/{id}
+    defaults: { _controller: AppAdminBundle:User:edit }
+    requirements:
+        id:    '\d+'
+
+app_admin_user_delete:
+    path:     /user/delete
+    defaults: { _controller: AppAdminBundle:User:delete }
+
+# ---------- FORUM ----------
+# ---------------------------
+
+app_admin_forum_show:
+    path:     /forum/listing
+    defaults: { _controller: AppAdminBundle:Forum:index }
+
+app_admin_forum_delete:
+    path:     /forum/delete
+    defaults: { _controller: AppAdminBundle:Forum:delete }
+
+# ---------- COMMENTAIRES ----------
+# ----------------------------------
+
+app_admin_commentaires_show:
+    path:     /commentaires
+    defaults: { _controller: AppAdminBundle:Commentaires:index }
+
+app_admin_commentaires_delete:
+    path:     /commentaires/delete
+    defaults: { _controller: AppAdminBundle:Commentaire:delete }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

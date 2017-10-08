@@ -1,0 +1,13 @@
+app_support_homepage:
+    path:     /support
+    defaults: { _controller: AppSupportBundle:Support:index }
+
+app_support_theme:
+    path:     /support/theme/{id}
+    defaults: { _controller: AppSupportBundle:Support:theme }
+    requirements:
+        id:    '\d+'
+
+app_support_show:
+    path:     /support/show
+    defaults: { _controller: AppSupportBundle:Support:view }

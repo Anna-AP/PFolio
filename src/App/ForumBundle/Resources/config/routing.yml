@@ -1,0 +1,27 @@
+app_forum_homepage:
+    path:     /forum
+    defaults: { _controller: AppForumBundle:Forum:index }
+
+app_forum_listing:
+    path:     /forum/listing
+    defaults: { _controller: AppForumBundle:Forum:listing }
+
+app_forum_show:
+    path:     /forum/topic
+    defaults: { _controller: AppForumBundle:Forum:view }
+
+app_forum_topic_new:
+    path:     /forum/new/topic
+    defaults: { _controller: AppForumBundle:Forum:addt }
+
+app_forum_topic_edit:
+    path:     /forum/edit/topic
+    defaults: { _controller: AppForumBundle:Forum:editt }
+
+app_forum_post_new:
+    path:     /forum/new/post
+    defaults: { _controller: AppForumBundle:Forum:addp }
+
+app_forum_post_edit:
+    path:     /forum/edit/post
+    defaults: { _controller: AppForumBundle:Forum:editp }
