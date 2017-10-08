@@ -142,7 +142,7 @@ app_admin_user_delete:
 # ---------------------------
 
 app_admin_forum_show:
-    path:     /forum/listing
+    path:     /foruma
     defaults: { _controller: AppAdminBundle:Forum:index }
 
 app_admin_forum_delete:
