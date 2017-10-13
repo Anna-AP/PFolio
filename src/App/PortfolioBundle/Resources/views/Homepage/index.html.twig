@@ -1,7 +1,9 @@
 {% extends "AppPortfolioBundle::index.html.twig" %}
 
+{% block title %}Home{% endblock %}
+	
 {% block body %}
-	<section class="content_admin">
+	<section class="content_fo">
 		<div class="row homepage">
 			<div class="last_real">
 				<h2><span class="first_letter">L</span>AST PROJECTS</h2>
@@ -28,7 +30,7 @@
 					</div>
 				</div>
 				<div class="last_sup">
-					<h2><span class="first_letter">L</span>AST SUPPORT<span class="date">01-01-2018</span></h2>
+					<h2><span class="first_letter">L</span>AST SUPPORT<span class="date">HTML<span class="separator">|</span>01-01-2018</span></h2>
 					<div class="content">
 			        	{% for actu in actualite %}
 							<h3>{{ actu.title }}</h3>

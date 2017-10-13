@@ -99,23 +99,23 @@ app_admin_theme_delete:
 # ---------- PROFILS ----------
 # -----------------------------
 
-app_admin_profils_show:
-    path:     /profils
-    defaults: { _controller: AppAdminBundle:Profils:index }
+app_admin_type_show:
+    path:     /type
+    defaults: { _controller: AppAdminBundle:Type:index }
 
-app_admin_profils_new:
-    path:     /profils/new
-    defaults: { _controller: AppAdminBundle:Profils:add }
+app_admin_type_new:
+    path:     /type/new
+    defaults: { _controller: AppAdminBundle:Type:add }
 
-app_admin_profils_edit:
-    path:     /profils/edit/{id}
-    defaults: { _controller: AppAdminBundle:Profils:edit }
+app_admin_type_edit:
+    path:     /type/edit/{id}
+    defaults: { _controller: AppAdminBundle:Type:edit }
     requirements:
         id:    '\d+'
 
-app_admin_profils_delete:
-    path:     /profils/delete
-    defaults: { _controller: AppAdminBundle:Profils:delete }
+app_admin_type_delete:
+    path:     /type/delete
+    defaults: { _controller: AppAdminBundle:Type:delete }
 
 # ---------- USER ----------
 # --------------------------

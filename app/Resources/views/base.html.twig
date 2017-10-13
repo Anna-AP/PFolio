@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Anna-Ang&eacute;lique PORTE - D&eacute;veloppeuse Web{% endblock %}</title>
+        <title>Init() - {% block title %}{% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
             {% stylesheets  
@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse navHeaderCollapse">
                     <ul class="nav navbar-nav navbar-left col_lg-offset-0">
                         <li><a href="{{ path('app_portfolio_homepage') }}">Home</a></li>
-                        <li><a href="{{ path('app_actualite_homepage') }}">News</a></li>
+                        <li><a href="{{ path('app_actualite_homepage') }}">Actuality</a></li>
                         <li><a href="{{ path('app_portfolio_realisations') }}">Projects</a></li>
                         <li><a href="{{ path('app_support_homepage') }}">Support</a></li>
                         <li><a href="{{ path('app_portfolio_about_me') }}">About me</a></li>
@@ -45,14 +45,14 @@
                 <p><a href="{{ path('fos_user_registration_register') }}">Inscription</a><span class="separator">|</span><a href="{{ path('fos_user_security_login') }}">Connexion</a></p>
             </div>
             <div class="nav_bo">
-                <a href="{{ path('app_admin_actualite_show') }}">Actualité</a>
-                <a href="{{ path('app_admin_realisations_show') }}">Réalisations</a>
+                <a href="{{ path('app_admin_actualite_show') }}">Actuality</a>
+                <a href="{{ path('app_admin_realisations_show') }}">Projects</a>
                 <a href="{{ path('app_admin_support_show') }}">Support</a>
                 <a href="{{ path('app_admin_user_show') }}">User</a>
-                <a href="{{ path('app_admin_theme_show') }}">Thèmes</a>
-                <a href="{{ path('app_admin_profils_show') }}">Profils</a>
+                <a href="{{ path('app_admin_theme_show') }}">Themes</a>
+                <a href="{{ path('app_admin_type_show') }}">Type</a>
                 <a href="{{ path('app_admin_forum_show') }}">Forum</a>
-                <a href="{{ path('app_admin_commentaires_show') }}">Commentaires</a>
+                <a href="{{ path('app_admin_commentaires_show') }}">Comments</a>
             </div>
         </div>
 

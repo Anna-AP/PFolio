@@ -1,17 +1,21 @@
 {% extends "AppPortfolioBundle::index.html.twig" %}
 
+{% block title %}Projects{% endblock %}
+
 {% block body %}
-	<section class="content_admin">
+	<section class="content_fo">
 		<div class="row">
-			<h1 class="text-center title_admin">{% block title %} {{ 'My Projects' }} {% endblock %}</h1>
+			<h1 class="text-center title_fo">Projects</h1>
 		</div>
 
-		<div class="row" style="margin-top:30px;margin-left:60px;margin-right:20px;">
+		<div class="projects">
 			{% for real in realisations %}
-				<div class="vignette col-lg-2 col-md-3 col-sm-4 col-x-12 text-center">
-			        <img src="{{ asset('images/'~real.logo) }}" class="img-responsive" width="160" height="160" style="box-shadow: 3px 3px 8px #c8c7c7;">
-			       	<a class="vignette dialog" id="{{ real.id }}">{{ real.title }}</a>
-			    </div>
+				<div class="row vignette">
+					<div class="text-center">
+				        <img src="{{ asset('images/'~real.logo) }}" class="img-responsive img_vignette" width="160" height="160">
+				       	<a class="vignette dialog" id="{{ real.id }}">{{ real.title }}</a>
+				    </div>
+				</div>
 			{% endfor %}
 		</div>
 

@@ -1,20 +1,20 @@
 {% extends "AppActualiteBundle::index.html.twig" %}
 
-{% block body %}
-	<div class="container content_admin">
-		<div class="row">
-			<article>
-				<header>
-					<h2>{{ actualite.title }}</h2>
-				</header>
-				<img src="{{ asset('images/'~actualite.visuel) }}">
-				<div>
+{% block title %}Actuality - {{ actualite.title }}{% endblock %}
 
-					{{ actualite.text|raw }}
-				</div>
-				<footer>
-					Date Publication
-				</footer>
+{% block body %}
+	<div class="container content_fo">
+		<div class="row">
+			<h1 class="text-center title_actu">{{ actualite.title }}</h1>
+		</div>
+		<div class="row">
+			<img class="img_actuality text-center" src="{{ asset('images/'~actualite.visuel) }}">
+			<div class="content_actuality">
+				{{ actualite.text|raw }}
+			</div>
+			<footer>
+				Date Publication
+			</footer>
 			</article>
 		</div>
 	</div>

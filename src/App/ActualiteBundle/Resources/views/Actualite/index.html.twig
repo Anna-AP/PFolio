@@ -1,23 +1,23 @@
 {% extends "AppActualiteBundle::index.html.twig" %}
 
+{% block title %}Actuality{% endblock %}
+
 {% block body %}
-	<div class="container content_admin">
+	<div class="container content_fo">
 		<div class="row">
-			<h1 class="text-center title_admin">{{ 'News' }} </h1>
+			<h1 class="text-center title_fo">Actuality</h1>
 		</div>
 
 		{% for actu in actualite %}
 			<div class="row">
-				<article>
-					<header>
-						<h2>{{ actu.title }}</h2>
-					</header>
-					<div>
-						{{ actu.text|truncate(450)|raw }}
-						<a href="{{ path('app_actualite_show', {id: actu.id}) }}">Voir plus</a>
+				<article class="actuality">
+					<h2>{{ actu.title }}</h2>
+					<div class="content_actuality">
+						{{ actu.text|truncate(900)|raw }}
+						<a class="voir_plus" href="{{ path('app_actualite_show', {id: actu.id}) }}">Voir plus</a>
 					</div>
 					<footer>
-						Date Publication
+						<p class="date_pub">01-01-2018</p>
 					</footer>
 				</article>
 			</div>
