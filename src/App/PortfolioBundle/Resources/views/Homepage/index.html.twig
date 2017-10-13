@@ -2,19 +2,85 @@
 
 {% block body %}
 	<section class="content_admin">
-		<div class="row">
-			<h1 class="text-center title_admin">{% block title %} {{ 'My Projects' }} {% endblock %}</h1>
-		</div>
+		<div class="row homepage">
+			<div class="last_real">
+				<h2><span class="first_letter">L</span>AST PROJECTS</h2>
+				<div class="content">
+					{% for real in realisations %}
+						<div class="text-center vignette">
+					        <img src="{{ asset('images/'~real.logo) }}" class="img_vignette img-responsive" width="160" height="160">
+					       	<a class="vignette dialog" id="{{ real.id }}">{{ real.title }}</a>
+					    </div>
+					{% endfor %}
+				</div>
+			</div>
+        	<div class="last_articles">
+        		<div class="last_actu">
+	        		<h2><span class="first_letter">L</span>AST ACTUALITY<span class="date">01-01-2018</span></h2>
+	        		<div class="content">
+			        	{% for actu in actualite %}
+							<h3>{{ actu.title }}</h3>
+							<div>
+								{{ actu.text|truncate(1250)|raw }}
+								<a class="voir_plus" href="{{ path('app_actualite_show', {id: actu.id}) }}">Voir plus</a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="last_sup">
+					<h2><span class="first_letter">L</span>AST SUPPORT<span class="date">01-01-2018</span></h2>
+					<div class="content">
+			        	{% for actu in actualite %}
+							<h3>{{ actu.title }}</h3>
+							<div>
+								{{ actu.text|truncate(1250)|raw }}
+								<a class="voir_plus" href="{{ path('app_actualite_show', {id: actu.id}) }}">Voir plus</a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="last_forum">
+				<h2><span class="first_letter">L</span>AST FORUM</h2>
+				<div class="content">
+					<h3>HTML | CSS</h3>
+					<a href="" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+					<p class="pseudo">Pseudo | 01-01-2018</p>
 
-		<div class="row" style="margin-top:30px;margin-left:60px;margin-right:20px;">
-			{% for real in realisations %}
-				<div class="vignette col-lg-2 col-md-3 col-sm-4 col-x-12 text-center">
-			        <img src="{{ asset('images/'~real.logo) }}" class="img-responsive" width="160" height="160" style="box-shadow: 3px 3px 8px #c8c7c7;">
-			       	<a class="vignette dialog" id="{{ real.id }}">{{ real.title }}</a>
-			    </div>
-			{% endfor %}
-		</div>
+					<h3>JAVASCRIPT</h3>
+					<a href="" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+					<p class="pseudo">Pseudo | 01-01-2018</p>
 
+					<h3>PHP</h3>
+					<a href="" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+					<p class="pseudo">Pseudo | 01-01-2018</p>
+
+					<h3>SQL | BASE DE DONNEES</h3>
+					<a href="" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+					<p class="pseudo">Pseudo | 01-01-2018</p>
+
+					<h3>JAVA</h3>
+					<a href="" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+					<p class="pseudo">Pseudo | 01-01-2018</p>
+
+					<h3>C</h3>
+					<a href="" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+					<p class="pseudo">Pseudo | 01-01-2018</p>
+
+					<h3>C++</h3>
+					<a href="" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+					<p class="pseudo">Pseudo | 01-01-2018</p>
+
+					<h3>LINUX</h3>
+					<a href="" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+					<p class="pseudo">Pseudo | 01-01-2018</p>
+
+					<h3>RUBY</h3>
+					<a href="" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+					<p class="pseudo">Pseudo | 01-01-2018</p>
+				</div>
+			</div>
+		</div>
 		{% for real in realisations %}
 		    <div id="dialog_{{ real.id }}" id="{{ real.id }}" style="display:none;">
                 <header>
@@ -31,27 +97,6 @@
                 </footer>
 	        </div>
         {% endfor %}
-        <div class="row">
-        	{% for actu in actualite %}
-				<article>
-					<header>
-						<h2>{{ actu.title }}</h2>
-					</header>
-					<div>
-						{{ actu.text|truncate(900)|raw }}
-						<a href="{{ path('app_actualite_show', {id: actu.id}) }}">Voir plus</a>
-					</div>
-					<footer>
-						Date Publication
-					</footer>
-				</article>
-			{% endfor %}
-		</div>
-
-		<div class="row">
-			SUPPORT
-		</div>
-		<img src="{{ asset('images/me.png') }}">
 	</section>
 
 {% endblock %}

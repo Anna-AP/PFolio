@@ -39,9 +39,29 @@
                     </ul>
                 </div>
             </div>
+            <div class="nav_user">
+                <a href=""><img src="{{ asset('images/deconnexion.png') }}"></a>
+                <p>Bienvenue Pseudo</p>
+                <p><a href="{{ path('fos_user_registration_register') }}">Inscription</a><span class="separator">|</span><a href="{{ path('fos_user_security_login') }}">Connexion</a></p>
+            </div>
+            <div class="nav_bo">
+                <a href="{{ path('app_admin_actualite_show') }}">Actualité</a>
+                <a href="{{ path('app_admin_realisations_show') }}">Réalisations</a>
+                <a href="{{ path('app_admin_support_show') }}">Support</a>
+                <a href="{{ path('app_admin_user_show') }}">User</a>
+                <a href="{{ path('app_admin_theme_show') }}">Thèmes</a>
+                <a href="{{ path('app_admin_profils_show') }}">Profils</a>
+                <a href="{{ path('app_admin_forum_show') }}">Forum</a>
+                <a href="{{ path('app_admin_commentaires_show') }}">Commentaires</a>
+            </div>
         </div>
 
         {% block body %}{% endblock %}
+
         {% block javascript %}{% endblock %}
+
+        <footer class="footer">
+            <p>Anna-Angélique PORTE | 2017</p>
+        </footer>
     </body>
 </html>

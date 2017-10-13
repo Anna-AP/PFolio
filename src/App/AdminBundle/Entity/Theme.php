@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Theme
+ * Permet de catégoriser chaque contenu Support par thème
  *
  * @ORM\Table(name="theme")
  * @ORM\Entity(repositoryClass="App\AdminBundle\Repository\ThemeRepository")
@@ -13,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Theme
 {
     /**
-     * @var int
+     * @var int  
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -22,7 +23,7 @@ class Theme
     private $id;
 
     /**
-     * @var string
+     * @var string Nom de mon thème
      *
      * @ORM\Column(name="title", type="string", length=255)
      */
@@ -63,7 +64,7 @@ class Theme
     /**
      * Set title
      *
-     * @param string $title
+     * @param string $title 
      *
      * @return Theme
      */
